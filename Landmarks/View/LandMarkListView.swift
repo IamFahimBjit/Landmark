@@ -13,7 +13,7 @@ struct LandMarkListView: View {
         ZStack {
             Image(landmark.imageName ?? "")
                 .resizable()
-                .frame(height: 100)
+                .frame(height: 200)
                 .cornerRadius(10)
             HStack {
                 VStack(alignment: .leading) {
@@ -27,9 +27,12 @@ struct LandMarkListView: View {
                         .foregroundStyle(.white)
                         .lineLimit(1)
                         .truncationMode(/*@START_MENU_TOKEN@*/.tail/*@END_MENU_TOKEN@*/)
-                }
+                }.padding()
+                .background(.black.opacity(0.5))
+                .cornerRadius(10)
                 Spacer()
             }.padding(10)
+               
         }
     }
 }
